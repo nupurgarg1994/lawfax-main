@@ -1,0 +1,106 @@
+/* Contact Form Container */
+.contactFormContainer {
+  background: var(--color-fourth);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 600px;
+  position: relative;
+}
+
+.contactFormContainer h1 {
+  color: var(--color-primary);
+  text-align: center; /* Center-align the heading */
+}
+
+/* Contact Form Overlay */
+.contactFormOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+/* Contact Form Styles */
+.form {
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  color: #fff;
+}
+
+.formGroup {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: var(--color-primary); /* Change label color */
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  outline: none;
+  transition: border 0.3s;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+
+.input:focus,
+.textarea:focus {
+  border: 2px solid var(--color-primary);
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.textarea {
+  resize: vertical;
+}
+
+.submitButton {
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-weight: bold;
+  margin-top: 15px; /* Add some top margin to the button */
+}
+
+.submitButton:hover {
+  background-color: var(--color-secondary);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.successMessage {
+  color: #28a745;
+  font-size: 1rem;
+  margin-top: 1rem;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.errorMessage {
+  color: #dc3545;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
